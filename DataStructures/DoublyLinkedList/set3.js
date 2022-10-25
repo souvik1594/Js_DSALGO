@@ -171,14 +171,32 @@ class DoubleLinkedList {
     }
     return true;
   }
+
+  reverse() {
+    let temp = null,
+      current = this.head;
+
+    if (this.length === 1) {
+      return this;
+    }
+    while (current != null) {
+      temp = current.previous;
+      current.previous = current.next;
+      current.next = temp;
+      current = current.previous;
+    }
+
+    this.head = temp.previous;
+    return this;
+  }
 }
 
 let DLL = new DoubleLinkedList();
 DLL.push(123);
-DLL.push(124);
-DLL.push(125);
-DLL.push(126);
+// DLL.push(124);
+// DLL.push(125);
+// DLL.push(126);
 
 console.log("************************Action");
-console.log(DLL.remove(1));
-console.log(DLL);
+// console.log(DLL.remove(1));
+console.log(DLL.reverse());
