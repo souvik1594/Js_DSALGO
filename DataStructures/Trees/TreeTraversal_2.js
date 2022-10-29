@@ -67,7 +67,7 @@ class BinarySearchTree {
     return visited;
   }
 
-  //Depth First search - Preorder
+  //Depth First search - Preorder - export in list & make the structure back - cloning a structure
   depthFirstsearchPreorder() {
     var visited = [];
     var current = this.root;
@@ -95,7 +95,7 @@ class BinarySearchTree {
     return visited;
   }
 
-  //Depth First search - inOrder - Left First
+  //Depth First search - inOrder - Left First set of al the nodes in order (increasing or decreasing)
   depthFirstsearchInOrder() {
     var visited = [];
     var current = this.root;
