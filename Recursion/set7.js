@@ -1,6 +1,7 @@
 function fib(num) {
-  if (n <= 1) {
-    return n;
+  if (num <= 1) {
+    return num;
   }
   return fib(num - 2) + fib(num - 1);
 }
+console.log(fib(5));
